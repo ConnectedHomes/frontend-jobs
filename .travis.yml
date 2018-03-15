@@ -1,0 +1,49 @@
+sudo: false
+dist: trusty
+
+notifications:
+  email: false
+
+language: node_js # elm is installed from npm (see install below)
+
+cache:
+  directories: # so subsequent builds run faster
+    - elm-stuff/build-artifacts
+    - elm-stuff/packages
+    - sysconfcpus
+
+env:
+  # GITHUB_AUTH_TOKEN (sandfox's)
+  - secure: "KhdHFGLkitnwq5Skz0xsHuTpQ2+gojT6O66DTdB/uJlpW9+MSnEZFgEH8QEogoJppkVLbb8gI1RLiB0AgrE5Kvc+UBDJnieSAmBTxUw+94XaeyTOaI9zWU1WDIeI4oFQVh+rcMwNs7YIz3YG2ow2MwB+e3mkuh4Y/aveklrN5t8x8LQXYHM358hiolG+jTU+IYiiiMEHPrqtb7Mf99DDkqNNFTyBVtVwnSPF7WUaLts233SOGIinybihyA8iRnbqQl9OB3Z8JefHcV3wNwBPZrQswotCBSfK9s45vxFK4bpAdcWCpd0cK8I5DaM7FINXXnbUaNwNqlUu7eUIMML7EEiAJ178BEOkLxdRF5jD96A24KpTQNdoUXgpRTMp9XymvK838yA4fahO/xcYQQKfPEpCDpTZ+vPICPbWGFbYe39//gMz9FzrIo0TBLJeUofLOBNy68T668xFZ354xtQ58UimCbZ2JxWmQJg9W9rUTuiFU3kly5uwS7m8e3naYosRMmYiqguzqMgUXHv10X5lij30Cr/q8doWV8apQRSgQPNrNem4LLZF+jrbmFmACcVopkfF2X470eoPmSN6O93NY2MyN7MXXP0y6PyAcMeI2spH/sEdPLiTlsrsj/8M8GvOZIbaqRQ4YgC8TG6EqwSky/up6mCX6xvBoYJGnAcXYME="
+
+before_install:
+  - | # build time improvement see: https://git.io/vQcqz
+    if [ ! -d sysconfcpus/bin ];
+    then
+      git clone https://github.com/obmarg/libsysconfcpus.git;
+      cd libsysconfcpus;
+      ./configure --prefix=$TRAVIS_BUILD_DIR/sysconfcpus;
+      make && make install;
+      cd ..;
+    fi
+  - npm install -g elm
+  # the next 3 lines are courtesy of @rtfeldman https://git.io/vbj0j
+  - mv $(npm config get prefix)/bin/elm-make $(npm config get prefix)/bin/elm-make-old
+  - printf "#\041/bin/bash\n\necho \"Running elm-make with sysconfcpus -n 2\"\n\n$TRAVIS_BUILD_DIR/sysconfcpus/bin/sysconfcpus -n 2 elm-make-old \"\$@\"" > $(npm config get prefix)/bin/elm-make
+  - chmod +x $(npm config get prefix)/bin/elm-make
+
+install:
+  - travis_retry elm package install --yes
+
+script:
+  - elm-make Main.elm --output build/elm.js
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  local-dir: build
+  allow-empty-commit: true
+  github-token: $GITHUB_AUTH_TOKEN
+  on:
+    branch: master
