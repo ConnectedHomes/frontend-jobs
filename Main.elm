@@ -47,10 +47,10 @@ view model = div [ css
     , marginBottom (px 60)
     ]
   ]
-  [ title [] [text "Work at Hive"]
+  [ title [] [text "Work at Centrica Connected Home"]
   , heading [] [text "About us"]
   , paragraph [] [text """
-    At Hive we develop web and mobile applications to control an ecosystem of smart home devices.
+    At Centrica Connected Home we develop web and mobile applications to control an ecosystem of smart home devices.
     With our tech, people can turn on a light automatically when a door is open or schedule heating to
     be always the perfect temperature.
     """]
