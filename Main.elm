@@ -98,6 +98,14 @@ view model = div [ css
     , li [] [text "Autonomy - you will be able to change how we work and choose the tools we use, your opinion matters"]
     , li [] [text "Fun team to hang out and learn with"]
     ]
+  , heading [] [text "Apply now"]
+  , paragraph []
+    [ span []
+      [ text "If this sounds good to you, send us your CV to "
+      , link [ href "mailto:frontend-jobs@hivehome.com" ] [ text "frontend-jobs@hivehome.com" ]
+      , text ". Tell us a bit about yourself, why you think you'd be a good fit, and feel free to share your GitHub/twitter/website."
+      ]
+    ]
   ]
 
 main : Program Never Model Msg
