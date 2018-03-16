@@ -14127,14 +14127,19 @@ var _user$project$Main$paragraph = A2(
 			_rtfeldman$elm_css$Css$px(16)),
 		_1: {ctor: '[]'}
 	});
-var _user$project$Main$orange = A3(_rtfeldman$elm_css$Css$rgb, 225, 122, 0);
+var _user$project$Main$orange = A3(_rtfeldman$elm_css$Css$rgb, 255, 121, 3);
 var _user$project$Main$title = A2(
 	_rtfeldman$elm_css$Html_Styled$styled,
 	_rtfeldman$elm_css$Html_Styled$h1,
 	{
 		ctor: '::',
 		_0: _rtfeldman$elm_css$Css$color(_user$project$Main$orange),
-		_1: {ctor: '[]'}
+		_1: {
+			ctor: '::',
+			_0: _rtfeldman$elm_css$Css$lineHeight(
+				_rtfeldman$elm_css$Css$em(1)),
+			_1: {ctor: '[]'}
+		}
 	});
 var _user$project$Main$link = A2(
 	_rtfeldman$elm_css$Html_Styled$styled,
@@ -14215,7 +14220,12 @@ var _user$project$Main$view = function (model) {
 												ctor: '::',
 												_0: _rtfeldman$elm_css$Css$marginBottom(
 													_rtfeldman$elm_css$Css$px(60)),
-												_1: {ctor: '[]'}
+												_1: {
+													ctor: '::',
+													_0: _rtfeldman$elm_css$Css$padding(
+														_rtfeldman$elm_css$Css$px(15)),
+													_1: {ctor: '[]'}
+												}
 											}
 										}
 									}
@@ -14229,53 +14239,64 @@ var _user$project$Main$view = function (model) {
 		{
 			ctor: '::',
 			_0: A2(
-				_user$project$Main$title,
-				{ctor: '[]'},
+				_rtfeldman$elm_css$Html_Styled$img,
 				{
 					ctor: '::',
-					_0: _rtfeldman$elm_css$Html_Styled$text('Work at Centrica Connected Home'),
-					_1: {ctor: '[]'}
-				}),
+					_0: _rtfeldman$elm_css$Html_Styled_Attributes$src('./logo.svg'),
+					_1: {
+						ctor: '::',
+						_0: _rtfeldman$elm_css$Html_Styled_Attributes$alt('Hive logo'),
+						_1: {
+							ctor: '::',
+							_0: _rtfeldman$elm_css$Html_Styled_Attributes$css(
+								{
+									ctor: '::',
+									_0: _rtfeldman$elm_css$Css$float(_rtfeldman$elm_css$Css$right),
+									_1: {
+										ctor: '::',
+										_0: _rtfeldman$elm_css$Css$marginLeft(
+											_rtfeldman$elm_css$Css$px(50)),
+										_1: {
+											ctor: '::',
+											_0: _rtfeldman$elm_css$Css$marginRight(
+												_rtfeldman$elm_css$Css$px(50)),
+											_1: {
+												ctor: '::',
+												_0: _rtfeldman$elm_css$Css$marginBottom(
+													_rtfeldman$elm_css$Css$px(10)),
+												_1: {
+													ctor: '::',
+													_0: _rtfeldman$elm_css$Css$marginTop(
+														_rtfeldman$elm_css$Css$px(30)),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{ctor: '[]'}),
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_user$project$Main$heading,
+					_user$project$Main$title,
 					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _rtfeldman$elm_css$Html_Styled$text('About us'),
+						_0: _rtfeldman$elm_css$Html_Styled$text('Work at Centrica Connected Home'),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
 					ctor: '::',
 					_0: A2(
-						_user$project$Main$paragraph,
+						_user$project$Main$heading,
 						{ctor: '[]'},
 						{
 							ctor: '::',
-							_0: A2(
-								_rtfeldman$elm_css$Html_Styled$span,
-								{ctor: '[]'},
-								{
-									ctor: '::',
-									_0: _rtfeldman$elm_css$Html_Styled$text('At Centrica Connected Home we develop web and mobile applications to control an '),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_rtfeldman$elm_css$Html_Styled$strong,
-											{ctor: '[]'},
-											{
-												ctor: '::',
-												_0: _rtfeldman$elm_css$Html_Styled$text('ecosystem of smart home devices.'),
-												_1: {ctor: '[]'}
-											}),
-										_1: {
-											ctor: '::',
-											_0: _rtfeldman$elm_css$Html_Styled$text('\n      With our tech, people can turn on a light automatically when a door is open or schedule heating to\n      be always the perfect temperature.\n      '),
-											_1: {ctor: '[]'}
-										}
-									}
-								}),
+							_0: _rtfeldman$elm_css$Html_Styled$text('About us'),
 							_1: {ctor: '[]'}
 						}),
 					_1: {
@@ -14290,7 +14311,7 @@ var _user$project$Main$view = function (model) {
 									{ctor: '[]'},
 									{
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Html_Styled$text('\n      In order to deliver the best user experience, we work closely with designers and product owners.\n      We then choose the most appropriate tools to implement their ideas, such as\n      '),
+										_0: _rtfeldman$elm_css$Html_Styled$text('At Centrica Connected Home we develop web and mobile applications to control an '),
 										_1: {
 											ctor: '::',
 											_0: A2(
@@ -14298,12 +14319,12 @@ var _user$project$Main$view = function (model) {
 												{ctor: '[]'},
 												{
 													ctor: '::',
-													_0: _rtfeldman$elm_css$Html_Styled$text('React, React Native, and Serverless.'),
+													_0: _rtfeldman$elm_css$Html_Styled$text('ecosystem of smart home devices.'),
 													_1: {ctor: '[]'}
 												}),
 											_1: {
 												ctor: '::',
-												_0: _rtfeldman$elm_css$Html_Styled$text('\n      We strongly believe that functional programming helps us write readable code and\n      we care about making the most out of it.\n      '),
+												_0: _rtfeldman$elm_css$Html_Styled$text('\n      With our tech, people can turn on a light automatically when a door is open or schedule heating to\n      be always the perfect temperature.\n      '),
 												_1: {ctor: '[]'}
 											}
 										}
@@ -14322,7 +14343,7 @@ var _user$project$Main$view = function (model) {
 										{ctor: '[]'},
 										{
 											ctor: '::',
-											_0: _rtfeldman$elm_css$Html_Styled$text('We\'re always striving to find the best solution for any problem, and '),
+											_0: _rtfeldman$elm_css$Html_Styled$text('\n      In order to deliver the best user experience, we work closely with designers and product owners.\n      We then choose the most appropriate tools to implement their ideas, such as\n      '),
 											_1: {
 												ctor: '::',
 												_0: A2(
@@ -14330,12 +14351,12 @@ var _user$project$Main$view = function (model) {
 													{ctor: '[]'},
 													{
 														ctor: '::',
-														_0: _rtfeldman$elm_css$Html_Styled$text('our work is much more than just shipping stories.'),
+														_0: _rtfeldman$elm_css$Html_Styled$text('React, React Native, and Serverless.'),
 														_1: {ctor: '[]'}
 													}),
 												_1: {
 													ctor: '::',
-													_0: _rtfeldman$elm_css$Html_Styled$text('\n      Upgrading libraries, trying new approaches and tools, and refactoring old\n      code to meet latest standards are a part of our routine. We have regular meetings where we\'re discussing\n      improvements to the codebase, pair on ideas and tricky issues, and are always open to changing the way we work.\n      '),
+													_0: _rtfeldman$elm_css$Html_Styled$text('\n      We strongly believe that functional programming helps us write readable code and\n      we care about making the most out of it.\n      '),
 													_1: {ctor: '[]'}
 												}
 											}
@@ -14345,54 +14366,43 @@ var _user$project$Main$view = function (model) {
 							_1: {
 								ctor: '::',
 								_0: A2(
-									_user$project$Main$heading,
+									_user$project$Main$paragraph,
 									{ctor: '[]'},
 									{
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Html_Styled$text('How we work'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_user$project$Main$paragraph,
-										{ctor: '[]'},
-										{
-											ctor: '::',
-											_0: A2(
-												_rtfeldman$elm_css$Html_Styled$span,
-												{ctor: '[]'},
-												{
+										_0: A2(
+											_rtfeldman$elm_css$Html_Styled$span,
+											{ctor: '[]'},
+											{
+												ctor: '::',
+												_0: _rtfeldman$elm_css$Html_Styled$text('We\'re always striving to find the best solution for any problem, and '),
+												_1: {
 													ctor: '::',
 													_0: A2(
 														_rtfeldman$elm_css$Html_Styled$strong,
 														{ctor: '[]'},
 														{
 															ctor: '::',
-															_0: _rtfeldman$elm_css$Html_Styled$text('We work from home a lot'),
+															_0: _rtfeldman$elm_css$Html_Styled$text('our work is much more than just shipping stories.'),
 															_1: {ctor: '[]'}
 														}),
 													_1: {
 														ctor: '::',
-														_0: _rtfeldman$elm_css$Html_Styled$text('\n        and we understand that people have busy lives that require flexibility.\n        If you need to pick up your kid from school early or get to a doctor’s appointment, you can definitely do so.\n        All our meetings happen in person as well as on hangouts/zoom and we use slack as our main communication tool.\n        That way even\n        '),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_rtfeldman$elm_css$Html_Styled$strong,
-																{ctor: '[]'},
-																{
-																	ctor: '::',
-																	_0: _rtfeldman$elm_css$Html_Styled$text('people who aren\'t at the office can meaningfully contribute'),
-																	_1: {ctor: '[]'}
-																}),
-															_1: {
-																ctor: '::',
-																_0: _rtfeldman$elm_css$Html_Styled$text('\n       to what we\'re discussing and working on. We use Jira and Github to organise and share our work with\n       others on the team and throughout the organisation.\n      '),
-																_1: {ctor: '[]'}
-															}
-														}
+														_0: _rtfeldman$elm_css$Html_Styled$text('\n      Upgrading libraries, trying new approaches and tools, and refactoring old\n      code to meet the latest standards are a part of our routine. We have regular meetings where we\'re discussing\n      improvements to the codebase, pair on ideas and tricky issues, and are always open to changing the way we work.\n      '),
+														_1: {ctor: '[]'}
 													}
-												}),
+												}
+											}),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_user$project$Main$heading,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: _rtfeldman$elm_css$Html_Styled$text('How we work'),
 											_1: {ctor: '[]'}
 										}),
 									_1: {
@@ -14407,21 +14417,32 @@ var _user$project$Main$view = function (model) {
 													{ctor: '[]'},
 													{
 														ctor: '::',
-														_0: _rtfeldman$elm_css$Html_Styled$text('Although we have the option to work from home, we also come to the '),
+														_0: A2(
+															_rtfeldman$elm_css$Html_Styled$strong,
+															{ctor: '[]'},
+															{
+																ctor: '::',
+																_0: _rtfeldman$elm_css$Html_Styled$text('We work from home a lot'),
+																_1: {ctor: '[]'}
+															}),
 														_1: {
 															ctor: '::',
-															_0: A2(
-																_rtfeldman$elm_css$Html_Styled$strong,
-																{ctor: '[]'},
-																{
-																	ctor: '::',
-																	_0: _rtfeldman$elm_css$Html_Styled$text('office in central London'),
-																	_1: {ctor: '[]'}
-																}),
+															_0: _rtfeldman$elm_css$Html_Styled$text('\n        and we understand that people have busy lives that require flexibility.\n        If you need to pick up your kid from school early or get to a doctor’s appointment, you can definitely do so.\n        All our meetings happen in person as well as on hangouts/zoom and we use slack as our main communication tool.\n        That way even\n        '),
 															_1: {
 																ctor: '::',
-																_0: _rtfeldman$elm_css$Html_Styled$text('\n        to hang out with each other. We play board games a lot, and sometimes go trampolining or playing top golf.\n        In essence, we\'re trying to achieve a good balance of doing a great job while having space for personal lives and fun.\n        '),
-																_1: {ctor: '[]'}
+																_0: A2(
+																	_rtfeldman$elm_css$Html_Styled$strong,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: _rtfeldman$elm_css$Html_Styled$text('people who aren\'t at the office can meaningfully contribute'),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: _rtfeldman$elm_css$Html_Styled$text('\n       to what we\'re discussing and working on. We use Jira and Github to organise and share our work with\n       others on the team and throughout the organisation.\n      '),
+																	_1: {ctor: '[]'}
+																}
 															}
 														}
 													}),
@@ -14439,7 +14460,7 @@ var _user$project$Main$view = function (model) {
 														{ctor: '[]'},
 														{
 															ctor: '::',
-															_0: _rtfeldman$elm_css$Html_Styled$text('We love '),
+															_0: _rtfeldman$elm_css$Html_Styled$text('Although we have the option to work from home, we also come to the '),
 															_1: {
 																ctor: '::',
 																_0: A2(
@@ -14447,51 +14468,13 @@ var _user$project$Main$view = function (model) {
 																	{ctor: '[]'},
 																	{
 																		ctor: '::',
-																		_0: _rtfeldman$elm_css$Html_Styled$text('contributing to the community.'),
+																		_0: _rtfeldman$elm_css$Html_Styled$text('office in central London'),
 																		_1: {ctor: '[]'}
 																	}),
 																_1: {
 																	ctor: '::',
-																	_0: _rtfeldman$elm_css$Html_Styled$text(' We host meet-ups at our offices, and contribute to open source where we can by'),
-																	_1: {
-																		ctor: '::',
-																		_0: A2(
-																			_user$project$Main$link,
-																			{
-																				ctor: '::',
-																				_0: _rtfeldman$elm_css$Html_Styled_Attributes$href('https://github.com/redux-utilities/redux-actions/pull/268'),
-																				_1: {ctor: '[]'}
-																			},
-																			{
-																				ctor: '::',
-																				_0: _rtfeldman$elm_css$Html_Styled$text('creating pull requests'),
-																				_1: {ctor: '[]'}
-																			}),
-																		_1: {
-																			ctor: '::',
-																			_0: _rtfeldman$elm_css$Html_Styled$text(' or open sourcing our own libraries and '),
-																			_1: {
-																				ctor: '::',
-																				_0: A2(
-																					_user$project$Main$link,
-																					{
-																						ctor: '::',
-																						_0: _rtfeldman$elm_css$Html_Styled_Attributes$href('https://github.com/ConnectedHomes/serverless-plugin-kms'),
-																						_1: {ctor: '[]'}
-																					},
-																					{
-																						ctor: '::',
-																						_0: _rtfeldman$elm_css$Html_Styled$text('plugins'),
-																						_1: {ctor: '[]'}
-																					}),
-																				_1: {
-																					ctor: '::',
-																					_0: _rtfeldman$elm_css$Html_Styled$text('.'),
-																					_1: {ctor: '[]'}
-																				}
-																			}
-																		}
-																	}
+																	_0: _rtfeldman$elm_css$Html_Styled$text('\n        to hang out with each other. We play board games a lot, and sometimes go trampolining or playing top golf.\n        In essence, we\'re trying to achieve a good balance of doing a great job while having space for personal lives and fun.\n        '),
+																	_1: {ctor: '[]'}
 																}
 															}
 														}),
@@ -14500,104 +14483,164 @@ var _user$project$Main$view = function (model) {
 											_1: {
 												ctor: '::',
 												_0: A2(
-													_user$project$Main$heading,
+													_user$project$Main$paragraph,
 													{ctor: '[]'},
 													{
 														ctor: '::',
-														_0: _rtfeldman$elm_css$Html_Styled$text('About you'),
+														_0: A2(
+															_rtfeldman$elm_css$Html_Styled$span,
+															{ctor: '[]'},
+															{
+																ctor: '::',
+																_0: _rtfeldman$elm_css$Html_Styled$text('We love '),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_rtfeldman$elm_css$Html_Styled$strong,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _rtfeldman$elm_css$Html_Styled$text('contributing to the community.'),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: _rtfeldman$elm_css$Html_Styled$text(' We host meet-ups at our offices, and contribute to open source where we can by '),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_user$project$Main$link,
+																				{
+																					ctor: '::',
+																					_0: _rtfeldman$elm_css$Html_Styled_Attributes$href('https://github.com/redux-utilities/redux-actions/pull/268'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: _rtfeldman$elm_css$Html_Styled$text('creating pull requests'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: _rtfeldman$elm_css$Html_Styled$text(' or open sourcing our own libraries and '),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_user$project$Main$link,
+																						{
+																							ctor: '::',
+																							_0: _rtfeldman$elm_css$Html_Styled_Attributes$href('https://github.com/ConnectedHomes/serverless-plugin-kms'),
+																							_1: {ctor: '[]'}
+																						},
+																						{
+																							ctor: '::',
+																							_0: _rtfeldman$elm_css$Html_Styled$text('plugins'),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: _rtfeldman$elm_css$Html_Styled$text('.'),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}),
 														_1: {ctor: '[]'}
 													}),
 												_1: {
 													ctor: '::',
 													_0: A2(
-														_user$project$Main$paragraph,
+														_user$project$Main$heading,
 														{ctor: '[]'},
 														{
 															ctor: '::',
-															_0: _rtfeldman$elm_css$Html_Styled$text('We’re looking for a group of diverse and creative people who'),
+															_0: _rtfeldman$elm_css$Html_Styled$text('About you'),
 															_1: {ctor: '[]'}
 														}),
 													_1: {
 														ctor: '::',
 														_0: A2(
-															_rtfeldman$elm_css$Html_Styled$ul,
+															_user$project$Main$paragraph,
 															{ctor: '[]'},
 															{
 																ctor: '::',
-																_0: A2(
-																	_rtfeldman$elm_css$Html_Styled$li,
-																	{ctor: '[]'},
-																	{
-																		ctor: '::',
-																		_0: _rtfeldman$elm_css$Html_Styled$text('have great experience with React,'),
-																		_1: {ctor: '[]'}
-																	}),
-																_1: {
+																_0: _rtfeldman$elm_css$Html_Styled$text('We’re looking for a group of diverse and creative people who'),
+																_1: {ctor: '[]'}
+															}),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_rtfeldman$elm_css$Html_Styled$ul,
+																{ctor: '[]'},
+																{
 																	ctor: '::',
 																	_0: A2(
 																		_rtfeldman$elm_css$Html_Styled$li,
 																		{ctor: '[]'},
 																		{
 																			ctor: '::',
-																			_0: _rtfeldman$elm_css$Html_Styled$text('enjoy functional programming.'),
-																			_1: {ctor: '[]'}
-																		}),
-																	_1: {ctor: '[]'}
-																}
-															}),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_user$project$Main$paragraph,
-																{ctor: '[]'},
-																{
-																	ctor: '::',
-																	_0: _rtfeldman$elm_css$Html_Styled$text('The amount of experience is less important than your ability to code and to learn.'),
-																	_1: {ctor: '[]'}
-																}),
-															_1: {
-																ctor: '::',
-																_0: A2(
-																	_user$project$Main$subHeading,
-																	{ctor: '[]'},
-																	{
-																		ctor: '::',
-																		_0: _rtfeldman$elm_css$Html_Styled$text('Bonus points'),
-																		_1: {ctor: '[]'}
-																	}),
-																_1: {
-																	ctor: '::',
-																	_0: A2(
-																		_user$project$Main$paragraph,
-																		{ctor: '[]'},
-																		{
-																			ctor: '::',
-																			_0: _rtfeldman$elm_css$Html_Styled$text('Apart from the required skills above, we’d like devs who can relate to some of the following:'),
+																			_0: _rtfeldman$elm_css$Html_Styled$text('have great experience with React,'),
 																			_1: {ctor: '[]'}
 																		}),
 																	_1: {
 																		ctor: '::',
 																		_0: A2(
-																			_rtfeldman$elm_css$Html_Styled$ul,
+																			_rtfeldman$elm_css$Html_Styled$li,
 																			{ctor: '[]'},
 																			{
 																				ctor: '::',
-																				_0: A2(
-																					_rtfeldman$elm_css$Html_Styled$li,
-																					{ctor: '[]'},
-																					{
-																						ctor: '::',
-																						_0: _rtfeldman$elm_css$Html_Styled$text('Are comfortable with Redux, ES6, CSS3, styled components; animations are a plus'),
-																						_1: {ctor: '[]'}
-																					}),
-																				_1: {
+																				_0: _rtfeldman$elm_css$Html_Styled$text('enjoy functional programming.'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_user$project$Main$paragraph,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: _rtfeldman$elm_css$Html_Styled$text('The amount of experience is less important than your ability to code and to learn.'),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_user$project$Main$subHeading,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _rtfeldman$elm_css$Html_Styled$text('Bonus points'),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_user$project$Main$paragraph,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: _rtfeldman$elm_css$Html_Styled$text('Apart from the required skills above, we’d like devs who can relate to some of the following:'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_rtfeldman$elm_css$Html_Styled$ul,
+																				{ctor: '[]'},
+																				{
 																					ctor: '::',
 																					_0: A2(
 																						_rtfeldman$elm_css$Html_Styled$li,
 																						{ctor: '[]'},
 																						{
 																							ctor: '::',
-																							_0: _rtfeldman$elm_css$Html_Styled$text('Have an interest in React Native and Serverless technologies'),
+																							_0: _rtfeldman$elm_css$Html_Styled$text('Are comfortable with Redux, ES6, CSS3, styled components; animations are a plus'),
 																							_1: {ctor: '[]'}
 																						}),
 																					_1: {
@@ -14607,7 +14650,7 @@ var _user$project$Main$view = function (model) {
 																							{ctor: '[]'},
 																							{
 																								ctor: '::',
-																								_0: _rtfeldman$elm_css$Html_Styled$text('Are interested in a functional approach, has maybe tried out elm, elixir, haskell, or reasonml. You don’t need to know the definition of a monad but being able to use FP in practice is an advantage.'),
+																								_0: _rtfeldman$elm_css$Html_Styled$text('Have an interest in React Native and Serverless technologies'),
 																								_1: {ctor: '[]'}
 																							}),
 																						_1: {
@@ -14617,7 +14660,7 @@ var _user$project$Main$view = function (model) {
 																								{ctor: '[]'},
 																								{
 																									ctor: '::',
-																									_0: _rtfeldman$elm_css$Html_Styled$text('Are open-minded about using and discovering new tools'),
+																									_0: _rtfeldman$elm_css$Html_Styled$text('Are interested in a functional approach, has maybe tried out elm, elixir, haskell, or reasonml. You don’t need to know the definition of a monad but being able to use FP in practice is an advantage.'),
 																									_1: {ctor: '[]'}
 																								}),
 																							_1: {
@@ -14627,7 +14670,7 @@ var _user$project$Main$view = function (model) {
 																									{ctor: '[]'},
 																									{
 																										ctor: '::',
-																										_0: _rtfeldman$elm_css$Html_Styled$text('Care about user experience and working with other devs'),
+																										_0: _rtfeldman$elm_css$Html_Styled$text('Are open-minded about using and discovering new tools'),
 																										_1: {ctor: '[]'}
 																									}),
 																								_1: {
@@ -14637,7 +14680,7 @@ var _user$project$Main$view = function (model) {
 																										{ctor: '[]'},
 																										{
 																											ctor: '::',
-																											_0: _rtfeldman$elm_css$Html_Styled$text('Think about code quality, improvement, and optimisation'),
+																											_0: _rtfeldman$elm_css$Html_Styled$text('Care about user experience and working with other devs'),
 																											_1: {ctor: '[]'}
 																										}),
 																									_1: {
@@ -14647,50 +14690,50 @@ var _user$project$Main$view = function (model) {
 																											{ctor: '[]'},
 																											{
 																												ctor: '::',
-																												_0: _rtfeldman$elm_css$Html_Styled$text('Are involved in the community - if you do open source or attend/speak at meet-ups, that’s great!'),
+																												_0: _rtfeldman$elm_css$Html_Styled$text('Think about code quality, improvement, and optimisation'),
 																												_1: {ctor: '[]'}
 																											}),
-																										_1: {ctor: '[]'}
+																										_1: {
+																											ctor: '::',
+																											_0: A2(
+																												_rtfeldman$elm_css$Html_Styled$li,
+																												{ctor: '[]'},
+																												{
+																													ctor: '::',
+																													_0: _rtfeldman$elm_css$Html_Styled$text('Are involved in the community - if you do open source or attend/speak at meet-ups, that’s great!'),
+																													_1: {ctor: '[]'}
+																												}),
+																											_1: {ctor: '[]'}
+																										}
 																									}
 																								}
 																							}
 																						}
 																					}
-																				}
-																			}),
-																		_1: {
-																			ctor: '::',
-																			_0: A2(
-																				_user$project$Main$heading,
-																				{ctor: '[]'},
-																				{
-																					ctor: '::',
-																					_0: _rtfeldman$elm_css$Html_Styled$text('Perks'),
-																					_1: {ctor: '[]'}
 																				}),
 																			_1: {
 																				ctor: '::',
 																				_0: A2(
-																					_rtfeldman$elm_css$Html_Styled$ul,
+																					_user$project$Main$heading,
 																					{ctor: '[]'},
 																					{
 																						ctor: '::',
-																						_0: A2(
-																							_rtfeldman$elm_css$Html_Styled$li,
-																							{ctor: '[]'},
-																							{
-																								ctor: '::',
-																								_0: _rtfeldman$elm_css$Html_Styled$text('Competitive day rate'),
-																								_1: {ctor: '[]'}
-																							}),
-																						_1: {
+																						_0: _rtfeldman$elm_css$Html_Styled$text('Perks'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_rtfeldman$elm_css$Html_Styled$ul,
+																						{ctor: '[]'},
+																						{
 																							ctor: '::',
 																							_0: A2(
 																								_rtfeldman$elm_css$Html_Styled$li,
 																								{ctor: '[]'},
 																								{
 																									ctor: '::',
-																									_0: _rtfeldman$elm_css$Html_Styled$text('Work laptop'),
+																									_0: _rtfeldman$elm_css$Html_Styled$text('Competitive day rate'),
 																									_1: {ctor: '[]'}
 																								}),
 																							_1: {
@@ -14700,7 +14743,7 @@ var _user$project$Main$view = function (model) {
 																									{ctor: '[]'},
 																									{
 																										ctor: '::',
-																										_0: _rtfeldman$elm_css$Html_Styled$text('We’ll help you find the best times and locations for working that help support a healthy work-life balance'),
+																										_0: _rtfeldman$elm_css$Html_Styled$text('Work laptop'),
 																										_1: {ctor: '[]'}
 																									}),
 																								_1: {
@@ -14710,7 +14753,7 @@ var _user$project$Main$view = function (model) {
 																										{ctor: '[]'},
 																										{
 																											ctor: '::',
-																											_0: _rtfeldman$elm_css$Html_Styled$text('Autonomy - you will be able to change how we work and choose the tools we use, your opinion matters'),
+																											_0: _rtfeldman$elm_css$Html_Styled$text('We’ll help you find the best times and locations for working that help support a healthy work-life balance'),
 																											_1: {ctor: '[]'}
 																										}),
 																									_1: {
@@ -14720,62 +14763,73 @@ var _user$project$Main$view = function (model) {
 																											{ctor: '[]'},
 																											{
 																												ctor: '::',
-																												_0: _rtfeldman$elm_css$Html_Styled$text('Fun team to hang out and learn with'),
+																												_0: _rtfeldman$elm_css$Html_Styled$text('Autonomy - you will be able to change how we work and choose the tools we use, your opinion matters'),
 																												_1: {ctor: '[]'}
 																											}),
-																										_1: {ctor: '[]'}
+																										_1: {
+																											ctor: '::',
+																											_0: A2(
+																												_rtfeldman$elm_css$Html_Styled$li,
+																												{ctor: '[]'},
+																												{
+																													ctor: '::',
+																													_0: _rtfeldman$elm_css$Html_Styled$text('Fun team to hang out and learn with'),
+																													_1: {ctor: '[]'}
+																												}),
+																											_1: {ctor: '[]'}
+																										}
 																									}
 																								}
 																							}
-																						}
-																					}),
-																				_1: {
-																					ctor: '::',
-																					_0: A2(
-																						_user$project$Main$heading,
-																						{ctor: '[]'},
-																						{
-																							ctor: '::',
-																							_0: _rtfeldman$elm_css$Html_Styled$text('Apply now'),
-																							_1: {ctor: '[]'}
 																						}),
 																					_1: {
 																						ctor: '::',
 																						_0: A2(
-																							_user$project$Main$paragraph,
+																							_user$project$Main$heading,
 																							{ctor: '[]'},
 																							{
 																								ctor: '::',
-																								_0: A2(
-																									_rtfeldman$elm_css$Html_Styled$span,
-																									{ctor: '[]'},
-																									{
-																										ctor: '::',
-																										_0: _rtfeldman$elm_css$Html_Styled$text('If this sounds good to you, send us your CV to '),
-																										_1: {
-																											ctor: '::',
-																											_0: A2(
-																												_user$project$Main$link,
-																												{
-																													ctor: '::',
-																													_0: _rtfeldman$elm_css$Html_Styled_Attributes$href('mailto:frontend-jobs@hivehome.com'),
-																													_1: {ctor: '[]'}
-																												},
-																												{
-																													ctor: '::',
-																													_0: _rtfeldman$elm_css$Html_Styled$text('frontend-jobs@hivehome.com'),
-																													_1: {ctor: '[]'}
-																												}),
-																											_1: {
-																												ctor: '::',
-																												_0: _rtfeldman$elm_css$Html_Styled$text('. Tell us a bit about yourself, why you think you\'d be a good fit, and feel free to share your GitHub/twitter/website.'),
-																												_1: {ctor: '[]'}
-																											}
-																										}
-																									}),
+																								_0: _rtfeldman$elm_css$Html_Styled$text('Apply now'),
 																								_1: {ctor: '[]'}
 																							}),
-																						_1: {ctor: '[]'}
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_user$project$Main$paragraph,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: A2(
+																										_rtfeldman$elm_css$Html_Styled$span,
+																										{ctor: '[]'},
+																										{
+																											ctor: '::',
+																											_0: _rtfeldman$elm_css$Html_Styled$text('If this sounds good to you, send us your CV to '),
+																											_1: {
+																												ctor: '::',
+																												_0: A2(
+																													_user$project$Main$link,
+																													{
+																														ctor: '::',
+																														_0: _rtfeldman$elm_css$Html_Styled_Attributes$href('mailto:frontend-jobs@hivehome.com'),
+																														_1: {ctor: '[]'}
+																													},
+																													{
+																														ctor: '::',
+																														_0: _rtfeldman$elm_css$Html_Styled$text('frontend-jobs@hivehome.com'),
+																														_1: {ctor: '[]'}
+																													}),
+																												_1: {
+																													ctor: '::',
+																													_0: _rtfeldman$elm_css$Html_Styled$text('. Tell us a bit about yourself, why you think you\'d be a good fit, and feel free to share your GitHub/twitter/website.'),
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {ctor: '[]'}
+																						}
 																					}
 																				}
 																			}
