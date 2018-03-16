@@ -29,6 +29,13 @@ heading =
         , marginTop (px 30)
         ]
 
+subHeading : List (Attribute msg) -> List (Html msg) -> Html msg
+subHeading =
+    styled h3
+        [ color slate
+        , marginTop (px 15)
+        ]
+
 link : List (Attribute msg) -> List (Html msg) -> Html msg
 link =
     styled a
@@ -74,21 +81,22 @@ view model = div [ css
     ]
   , paragraph [] [text "Although we work from home a lot, we also come to the office in central London. At the office, we sometimes play board games, go trampolining, or play top golf. At the same time, we understand that people also have their lives and want to live them. If you need to pick up your kid from school early or get to a doctor’s appointment, we have the flexibility to do so."]
   , heading [] [text "About you"]
-  , paragraph [] [text "We’re looking for someone who"]
+  , paragraph [] [text "We’re looking for a group of diverse and creative people who"]
   , ul []
-    [ li [] [text "has great experience with React,"]
-    , li [] [text "enjoys functional programming."]
+    [ li [] [text "have great experience with React,"]
+    , li [] [text "enjoy functional programming."]
     ]
   , paragraph [] [text "The amount of experience is less important than your ability to code and to learn."]
-  , paragraph [] [text "We’d like devs who can relate to some of the following points:"]
+  , subHeading [] [text "Bonus points"]
+  , paragraph [] [text "Apart from the required skills above, we’d like devs who can relate to some of the following:"]
   , ul []
-    [ li [] [text "Is comfortable with Redux, ES6, CSS3, styled components; animations are a plus"]
-    , li [] [text "Has an interest in React Native and Serverless technologies"]
-    , li [] [text "Is interested in a functional approach, has maybe tried out elm, elixir, haskell, or reasonml. You don’t need to know the definition of a monad but being able to use FP in practice is an advantage."]
-    , li [] [text "Is open-minded about using and discovering new tools"]
-    , li [] [text "Cares about user experience and working with other devs"]
-    , li [] [text "Thinks about code quality, improvement, and optimisation"]
-    , li [] [text "Is involved in the community - if you do open source or attend/speak at meet-ups, that’s great!"]
+    [ li [] [text "Are comfortable with Redux, ES6, CSS3, styled components; animations are a plus"]
+    , li [] [text "Have an interest in React Native and Serverless technologies"]
+    , li [] [text "Are interested in a functional approach, has maybe tried out elm, elixir, haskell, or reasonml. You don’t need to know the definition of a monad but being able to use FP in practice is an advantage."]
+    , li [] [text "Are open-minded about using and discovering new tools"]
+    , li [] [text "Care about user experience and working with other devs"]
+    , li [] [text "Think about code quality, improvement, and optimisation"]
+    , li [] [text "Are involved in the community - if you do open source or attend/speak at meet-ups, that’s great!"]
     ]
   , heading [] [text "Perks"]
   , ul []
