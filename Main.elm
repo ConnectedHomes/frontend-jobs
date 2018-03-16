@@ -3,12 +3,12 @@ module Main exposing (main)
 import Css exposing (..)
 import Html
 import Html.Styled exposing (..)
-import Html.Styled.Attributes exposing (css, href, src)
+import Html.Styled.Attributes exposing (css, href, src, alt)
 
 slate : Color
 slate = (rgb 51 73 91)
 orange : Color
-orange = (rgb 225 122 0)
+orange = (rgb 255 121 3)
 
 paragraph : List (Attribute msg) -> List (Html msg) -> Html msg
 paragraph =
@@ -20,6 +20,7 @@ title : List (Attribute msg) -> List (Html msg) -> Html msg
 title =
     styled h1
         [ color orange
+        , lineHeight (Css.em 1)
         ]
 
 heading : List (Attribute msg) -> List (Html msg) -> Html msg
@@ -52,9 +53,21 @@ view model = div [ css
     , marginRight auto
     , marginTop (px 60)
     , marginBottom (px 60)
+    , padding (px 15)
     ]
   ]
-  [ title [] [text "Work at Centrica Connected Home"]
+  [ img
+    [ src "./logo.svg"
+    , alt "Hive logo"
+    , css
+      [ float right
+      , marginLeft (px 50)
+      , marginRight (px 50)
+      , marginBottom (px 10)
+      , marginTop (px 30)
+      ]
+    ] []
+  , title [] [text "Work at Centrica Connected Home"]
   , heading [] [text "About us"]
   , paragraph []
     [span []
@@ -85,7 +98,7 @@ view model = div [ css
       , (strong [] [text "our work is much more than just shipping stories."])
       , text """
       Upgrading libraries, trying new approaches and tools, and refactoring old
-      code to meet latest standards are a part of our routine. We have regular meetings where we're discussing
+      code to meet the latest standards are a part of our routine. We have regular meetings where we're discussing
       improvements to the codebase, pair on ideas and tricky issues, and are always open to changing the way we work.
       """
       ]
@@ -121,7 +134,7 @@ view model = div [ css
     [span []
       [ text "We love "
       , (strong [] [text "contributing to the community."])
-      , text " We host meet-ups at our offices, and contribute to open source where we can by"
+      , text " We host meet-ups at our offices, and contribute to open source where we can by "
       , link [ href "https://github.com/redux-utilities/redux-actions/pull/268" ] [ text "creating pull requests" ]
       , text " or open sourcing our own libraries and "
       , link [ href "https://github.com/ConnectedHomes/serverless-plugin-kms" ] [ text "plugins" ]
